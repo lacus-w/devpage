@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Dev Page'
+copyright = '2024'
+author = 'esse LL'
 
 release = '0.1'
 version = '0.1.0'
@@ -17,6 +17,10 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.napoleon',
+    'sphinx_design',
+    'myst_nb',
+    'sphinx_copybutton',
 ]
 
 intersphinx_mapping = {
@@ -26,10 +30,14 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'changes/*.rst']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
+html_static_path = ['_static']
+html_css_files = ['overrides.css']
+html_title = "Dev Page"
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
